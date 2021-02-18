@@ -1,0 +1,86 @@
+html {
+  font-family: serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.df {
+  display: flex;
+}
+
+section {
+  height: 100vh;
+  width: 100%;
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background-color: rgba(255, 165, 81, .5);
+}
+
+
+/* ナビゲーション 下線エフェクト */
+.header-nav ul li a:before {
+  position: absolute;
+  bottom: 1.8em;
+  left: 0;
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 2px;
+  background: rgb(255, 241, 228);
+  transition: .6s;
+}
+
+.header-nav ul li a:hover:before{
+  width: 100%;
+}
+
+.header-nav ul li a:hover {
+  text-shadow: 1px 1px 5px #ccc;
+}
+
+
+
+.page-header {
+  width: 30%;
+  font-size: 30px;
+  /* border-bottom: solid 5px rgba(255, 165, 81, .5); */
+}
+
+h3 h4 p {
+  z-index: 2;
+}
+
+
+/* "フワッと"アニメーション */
+.fuwatAnime {
+  -webkit-animation-fill-mode:both;
+  -ms-animation-fill-mode:both;
+  animation-fill-mode:both;
+  -webkit-animation-duration:1.5s;
+  -ms-animation-duration:1.5s;
+  animation-duration:1.5s;
+  -webkit-animation-name: fuwatAnime;
+  -ms-animation-name: fuwatAnime;
+  animation-name: fuwatAnime;
+  visibility: visible !important;
+ }
+ @-webkit-keyframes fuwatAnime {
+  0% { opacity: 0; -webkit-transform: translateY(-20px); }
+  100% { opacity: 1; -webkit-transform: translateY(0); }
+ }
+ @keyframes fuwatAnime {
+  0% { opacity: 0; -webkit-transform: translateY(-20px); -ms-transform: translateY(-20px); transform: translateY(-20px); }
+  100% { opacity: 1; -webkit-transform: translateY(0); -ms-transform: translateY(0); transform: translateY(0); }
+ }
